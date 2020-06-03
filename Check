@@ -1,0 +1,41 @@
+
+function getsignCheck() {  
+ if (getsign.data.err_no==10012){
+   getsign1()
+  }
+  else if (getsign1.data.err_no==10012){
+    getsign2() 
+  }  
+  else if (getsign2.data.err_no==10012){
+    getsign3()
+  }
+  else if (getsign3.data.err_no==10012){
+    getsign4() 
+  }
+  else if (getsign4.data.err_no==10012){
+    getsign() 
+  }
+  else {
+  }
+}
+
+
+//转盘宝箱判断
+function rotaryCheck() { 
+ if (rotaryres.code==10010){
+  }
+  else if (100-rotaryres.data.remainTurn==rotaryres.data.chestOpen[0].times){
+    rotary1() 
+  }  
+  else if(100-rotaryres.data.remainTurn==rotaryres.data.chestOpen[1].times){
+    rotary2() 
+  }
+  else if(100-rotaryres.data.remainTurn==rotaryres.data.chestOpen[2].times){
+    rotary3() 
+  }
+  else if(100-rotaryres.data.remainTurn==rotaryres.data.chestOpen[3].times){
+    rotary4() 
+  }
+  else {
+  }
+}
